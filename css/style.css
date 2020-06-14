@@ -431,6 +431,7 @@ main {
 }
 
 .search__form-block {
+    width: 100%;
     display: block;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -569,7 +570,23 @@ main {
 
 .modal__description {
 	overflow-y: auto;
-	max-height: 400px;
+    max-height: 400px;
+    padding-right: 10px;
+}
+
+.modal__description::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #f5ce3f;
+}
+
+.modal__description::-webkit-scrollbar {
+    background: #f3f3f3;
+    -webkit-appearance: none;
+}
+
+.modal__description::-webkit-scrollbar:vertical {
+    width: 4px;
+    border-radius: 6px;
 }
 
 .modal__description section {
@@ -718,7 +735,7 @@ main {
 		overflow-y: auto;
 		max-height: 400px;
 		padding: 30px;
-		border-width: 16px;
+		border-width: 10px;
 	}
 
 	.modal__description {
@@ -1081,4 +1098,80 @@ div:after {
         transform: translate(0, 0) scale(1) rotate(360deg);
         background-color: #00838f;
     }
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    padding: 0 5px;
+}
+
+
+.thumb-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.thumb-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+}
+
+.trailer__item {
+    margin-top: 30px;
+}
+
+.trailer__item:first-child {
+    margin-top: 10px;
+}
+
+.search__form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search__form-btn {
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: all ease .3s;
+    border-width: 0;
+    background-color: #ffc107;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.search__form-btn:hover {
+    background: #f2b500;
+}
+
+.search__form-btn:active {
+    background: #dda600;
+}
+
+.search__form-btn:focus {
+    outline: none;
 }

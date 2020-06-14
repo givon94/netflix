@@ -85,11 +85,13 @@
         <section class="search">
             <form class="search__form">
                 <h2 class="search__form-head">Поиск</h2>
-                <label class="search__form-block">
-                    <input type="text" class="search__form-input" id="searchText"
-                           placeholder="Введи название...">
-                </label>
-                <button type="submit">Поиск</button>
+                <div class='search__form-wrapper'>
+                    <label class="search__form-block">
+                        <input type="text" class="search__form-input" id="searchText"
+                               placeholder="Введи название...">
+                    </label>
+                    <button type="submit" class='search__form-btn'>Поиск</button>
+                </div>
             </form>
         </section>
     </div>
@@ -101,6 +103,7 @@
             <h3 class="tv-shows__head"></h3>
             <ul class="tv-shows__list">
             </ul>
+            <ul class="pagination"></ul>
         </section>
 
     </div>
@@ -153,6 +156,13 @@
                         <a class="modal__link" href="https://google.com" target="_blanc">Оффициальная страница</a>
                     </p>
                 </section>
+
+                <section>
+                    <h3 class='hide' id='headTrailer'>Трйлеры:</h3>
+                    <ul id='trailer'></ul>
+                </section>
+
+
             </article>
             <div class="cross">
                 <span></span>
